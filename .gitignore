@@ -1,3 +1,6 @@
+## Added by Miguel
+*.lb
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

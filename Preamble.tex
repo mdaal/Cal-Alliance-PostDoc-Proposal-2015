@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+
+%shrink white spaces around sections
+\usepackage[compact]{titlesec} 
+
+% titlesec package reformat section, subsection, etc. headings to be std font size
+\titleformat*{\section}{\bfseries}
+\titleformat*{\subsection}{\bfseries}
+\titleformat*{\subsubsection}{\bfseries}
+\titleformat*{\paragraph}{\bfseries}
+\titleformat*{\subparagraph}{\bfseries}
+
+% for sub and super script in text mode
+\usepackage{fixltx2e}
+
+%\usepackage{fontspec} % Does not work with PDF Latex
+%\setmainfont{Times New Roman}
+\usepackage{subscript}% for \textsuperscript and subscript
+
+\usepackage[hyperref=true, maxcitenames=5, maxbibnames=3, block=none, style=numeric-comp, backend=biber, autocite=plain,doi=false,isbn=false,url=false]{biblatex}
+\addbibresource{2015_NASA_Post-Doc_Proposal.bib} 
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+%set caption size
+\usepackage[font=scriptsize,labelfont=bf]{caption}
+%scriptsize or footnotesize or small or normalsize or large or Large
+
+%\usepackage{tikz}
+%\usepackage{gantt}
+
+\usepackage{pgfgantt}
+
+%for proper representation of numbers with units 
+\usepackage{siunitx}
+\DeclareSIUnit\mK{\milli\K}
+\DeclareSIUnit\ueV{\micro\eV}
+\DeclareSIUnit\sec{\second}
+\DeclareSIUnit\parsec{pc}
+\DeclareSIUnit\mpc{\mega\parsec}
+\DeclareSIUnit\kpc{\kilo\parsec}
+\DeclareSIUnit\torr{torr}
+\DeclareSIUnit\psi{psi}
+\DeclareSIUnit\inch{inch}
+\DeclareSIUnit\sccm{sccm}
+\DeclareSIUnit\rpm{rpm}
+\DeclareSIUnit\oz{oz}
+\DeclareSIUnit\n{n}
+\DeclareSIUnit\year{yr}
+\DeclareSIUnit\each{ea}
+\DeclareSIUnit\bq{Bq}%Becquerel
+\DeclareSIUnit\gauss{G}
+
+\usepackage{xfrac} % allows you to make slanted fractions e.g. $\sfrac{1}{2}$  is 1/2
+
+% No page numbering
+%\pagestyle{empty}
+
+% Allows text wrapping around figures
+\usepackage[verbose]{wrapfig}
+
+% 1 inch margin
+\usepackage[margin=1in]{geometry}
+
+% so that \toprule \bottomrule in tables work
+\usepackage{booktabs} 
+
+\usepackage{ctable} % allows tables with nice footnotes and for \specialrule command (table rules with variable thickness etc)
+%%%%%%%%%
+\usepackage[percent]{overpic} % put latex over images, use percentage coordinates for placement
+
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+% Package for including code in the document
+%\usepackage{listings}
+
+% If you want to generate a toc for each chapter (use with book)
+%\usepackage{minitoc}
+
+%double spaceing... 
+\usepackage{setspace}
+\doublespacing   %Choose between \doublespacing \singlespacing \onehalfspacing or \setstretch{1.8}
+
+%another way to acheive double spacing, but does not switch off durring table environment.
+%\renewcommand{\baselinestretch}{2}
+
+%for \medspace, \thickspace, \negmedspace, and \negthickspace
+\usepackage{amsmath}
+
+% for \overbar, etc. 
+\usepackage{amsfonts}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu} %a nice size overbar
+%for \varnothing
+\usepackage{amssymb} 
+
+% This is now the recommended way for checking for PDFLaTeX:
+%\usepackage{ifpdf}
+
+
+
+%\newif\ifpdf
+%\ifx\pdfoutput\undefined
+%\pdffalse % we are not running PDFLaTeX
+%\else
+%\pdfoutput=1 % we are running PDFLaTeX
+%\pdftrue
+%\fi
+
+% \ifpdf
+% \usepackage[pdftex]{graphicx}
+% \else
+\usepackage{graphicx}
+% \fi
+%\title{A LaTeX Article}
+%\author{  }
+%\date{2014-02-01}
+

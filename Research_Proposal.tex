@@ -19,12 +19,12 @@
 
 %%Document need to be more specific on science impact; also needs to be clearer about what the TKIP, wTKIP, and muTKIP can do; Doc should call out  wTKIP performance expectations and TKIP theoretical performance limitation in the form of a table;
 
-\section{Statement of problem}
+\section{Introduction}
 High resolution spectroscopic observations in (sub)millimeter wavelengths are made using using telescopes with heterodyne receiver systems. In these receivers, power radiated from the sky is optically focused into a feed horn, then mixed to a lower intermediate frequency (IF) using an SIS mixer, then the IF signal is amplified with a low noise transistor amplifier (LNA), and then further processed and detected. Signal power is lost when traveling through the mixer, and the LNA adds noise. This imposes a \emph{sensitivity} limitation on the receiver. Additionally, the \emph{instantaneous bandwidth} of the receiver is limited by both the mixer and LNA bandwidths. We propose to develop an amplifier to be inserted immediately before the mixer in a heterodyne receiver setup. This amplifier would enable use of a wider IF bandwidth mixer; provide enough gain over the full mixer bandwidth to relax the noise performance required of the LNA, with improvement to the receiver's sensitivity; and permit the use of an LNA that covers the full mixer IF bandwith.
 
-This research would be pursued as part of a collaboration between the Caltech Observation Cosmology group in the Physic Department where design and analysis will be done, and the JPL microdevices group where fabrication and testing will be done.
+%This research would be pursued as part of a collaboration between the Caltech Observation Cosmology group in the Physic Department where design and analysis will be done, and the JPL microdevices group where fabrication and testing will be done.
    
-Development of this new amplifier, to be called the W-band Travel-wave Kinetic Inductance Parametric Amplifier (wTKIP)\footnote{Throughout this proposal,``TKIP'' refers to those devices for use at unspecified frequency bands, whereas wTKIP refers to the proposed device which is optimized for use at the W-band (80 - 116 GHz) and $\mu$TKIP refers to the microwave device described in \cite{Eom2012} \label{foot:TKIP}.}, would constitute a major breakthrough (sub)millimeter wave receiver systems. Ultimately, we want to demonstrate the wTKIP on the Atacama Large Millimeter/Submillimeter Array (ALMA) Band 3 receiver because this would be of great scientific benefit. This proposal aims to develop the TKIP technology to state where it is ready to be used at ALMA. 
+Development of this new amplifier, to be called the W-band Travel-wave Kinetic Inductance Parametric Amplifier (wTKIP)\footnote{Throughout this proposal,``TKIP'' refers to those devices for use at unspecified frequency bands, whereas wTKIP refers to the proposed device which is optimized for use at the W-band (\SIrange{80}{116}{\GHz}) and $\mu$TKIP refers to the microwave device described in \cite{Eom2012}\label{foot:TKIP}. ALMA's Band 3 is \SIrange{84}{116}{\GHz}.}, would constitute a major breakthrough in (sub)millimeter wave receiver systems. Ultimately, we want to demonstrate the wTKIP on the Atacama Large Millimeter/Submillimeter Array (ALMA) Band 3 receiver because this would be of great scientific consequence. Previous collaboration between the proposed host group and the ALMA team has identified ALMA's interest to obtain the technology.  \emph{This proposal aims to develop the TKIP technology to a state where it is ready to be used at an observatory such as ALMA}. 
 
   \begin{figure}
       \vspace{-20pt}
@@ -45,14 +45,17 @@ Development of this new amplifier, to be called the W-band Travel-wave Kinetic I
     \label{Fig:muTKIP}
    \end{figure}
 
-\section{Scientific merit}
-Progress toward understanding the following processes is in accordance with the scientific priorities declared in the National Academies 2010 decadal survey\footnote{See decadal survey chapter 2 on ``the compelling questions for the next decade and beyond'' with regard to ``origins''.}. 
+\section{Scientific merit} %hot topics in (sub)millimeter astronomy
+Progress toward understanding the following processes are  ALMA science goals and are consistent with the scientific priorities declared in the National Academies 2010 decadal survey\footnote{See decadal survey chapter 2 on ``the compelling questions for the next decade and beyond'' with regard to ``origins''.}. 
 
-\paragraph*{Molecular gas and dust emission and absorption in submillimeter galaxies,(SMGs)}
-SMGs trace a large fraction of the star formation activity in the universe and are dominated by objects undergoing rapid star formation at relatively high redshifts (1 $<$ z $<$ 3). ALMA can locate SMGs  and obtain redshift information by measuring the positions of CO lines. The improved receiver instantaneous bandwidth and noise afforded by the wTKIP would increase speed of imaging and spectroscopy of high redshift SMGs by more than a factor of ten.
+\paragraph*{Molecular gas and dust emission and absorption in submillimeter galaxies, (SMGs)}
+SMGs trace a large fraction of the star formation activity in the universe and are dominated by objects undergoing rapid star formation at relatively high redshifts (1 $<$ z $<$ 3). Once location and redshift information for a SMG has been acquired, improvements to the instantaneous bandwidth and noise of the receiver due to use of the wTKIP would increase speed of imaging and spectroscopy of high redshift SMGs by more than a factor of ten. 
+
+%ALMA can locate SMGs  and obtain redshift information by measuring the positions of CO lines. The improved receiver instantaneous bandwidth and noise afforded by the wTKIP would increase speed of imaging and spectroscopy of high redshift SMGs by more than a factor of ten.
+
 
 \paragraph*{Galaxy clusters}
-The Sunyaev-Zel’dovich (SZ) effect is a distortion of the cosmic microwave background (CMB) spectrum caused by the scattering of CMB photons as they pass through the intracluster medium of  galaxy clusters.  Wide-field high angular resolution imaging with moderate spectral resolution in bands from \SIrange{15}{300}{GHz} would allow unprecedented determination of the cluster gas temperature and density profiles and therefore the cluster mass and dynamics. These measurements could only be made with a significant increase in sensitivity, frequency coverage and mapping speed over the existing single dish and interferometric instruments.
+The Sunyaev-Zel’dovich (SZ) effect is a distortion of the cosmic microwave background (CMB) spectrum caused by the scattering of CMB photons as they pass through the intracluster medium of  galaxy clusters.  Wide-field high angular resolution imaging with moderate spectral resolution in (sub)millimeter bands would allow unprecedented determination of the cluster gas temperature and density profiles and therefore the cluster mass and dynamics. These measurements could only be made with a significant increase in sensitivity, frequency coverage and mapping speed over the existing single dish and interferometric instruments.
 
 \paragraph*{Star formation in the Milky Way}
 Understanding how molecular clouds of low density transition to clouds with density high enough to support star formation and why such a small fraction of the cloud mass is contained in dense gas is key to determining the dominant physical processes that control the star formation rate. Spectral lines from different molecular transitions probe different volume densities and temperatures, and time-dependent chemistry favors the production of different molecules at distinct times. The increased instantaneous bandwidth of a wTKIP receiver would accelerate detection of these lines. 
@@ -78,7 +81,7 @@ The TKIP, Fig.~\ref{Fig:muTKIP}a, consists of an electrically long section of su
       \vspace{-10pt}
     \label{Fig:TKIP_Gain}
 	  \end{figure} 
-The TKIP exploits the natural nonlinear behaviour of the surface inductance of the superconductor.  The surface inductance (``kinetic inductance'') depends on the current $I$, such that the series inductance per unit length is  $\overbar{L}(I) = \overbar{L}(0)[1+ \sfrac{I}{I_*}^2]$. The phase velocity depends on inductance, $v_{p}(I)= \sfrac{1}{\sqrt{\overbar{L}(I)\overbar{C}}} \approx v_{p}(0)(1 - \alpha I^2 / 2 I^2_*)$ and results in the nonlinear process of four-wave mixing (FWM). Fiber optic paramaps are based on this mixing \cite{Hansryd2002} and coupled mode equations have been developed to quantify their parametric gain. We use this theory \cite{Stolen1982} to predict the gain of the TKIP. For a dispersive transmission line the maximum signal gain is $G_S \approx \sfrac{e^{2\gamma P_P \ell}}{4}$, where $\ell$ is the length of the transmission line, $P_P$ is the pump power, and $\gamma$ is a measure of the nonlinearity.   
+The TKIP exploits the natural nonlinear behaviour of the surface inductance of the superconductor.  The surface inductance (``kinetic inductance'') depends on the current $I$, such that the series inductance per unit length is  $\overbar{L}(I) = \overbar{L}(0)[1+ \sfrac{I}{I_*}^2]$. The phase velocity depends on inductance, $v_{p}(I)= \sfrac{1}{\sqrt{\overbar{L}(I)\overbar{C}}} \approx v_{p}(0)(1 - \alpha I^2 / 2 I^2_*)$ and results in the nonlinear process of four-wave mixing. Fiber optic paramaps, used in telecommunications, are based on this mixing \cite{Hansryd2002} and coupled mode equations have been developed to quantify their parametric gain. We use this theory \cite{Stolen1982} to predict the gain of the TKIP. For a dispersive transmission line, the maximum signal gain is $G_S \approx \frac{1}{4} e^{2\gamma P_P \ell}$, where $\ell$ is the length of the transmission line, $P_P$ is the pump power, and $\gamma$ is a measure of the nonlinearity.   
  \begin{figure}
       \vspace{-20pt}
       \begin{center}
@@ -98,7 +101,7 @@ The TKIP exploits the natural nonlinear behaviour of the surface inductance of t
     \label{Fig:W-Band_Expected_Gain_Noise}
    \end{figure}   
 
-Dispersionless nonlinear media, such as our superconducting transmission line, support efficient harmonic generation. The formation of pump harmonics would severely limit the gain of the TKIP, \cite{Landauer1960}. We therefore introduce  dispersion into  the TKIP by periodically loading the line, Fig.~\ref{Fig:muTKIP}b. The loads additionally introduce dispersion around the pump frequency itself, $\omega_P$. This allows us to access the exponential gain. 
+Dispersionless nonlinear media, such as our superconducting transmission line, support efficient harmonic generation. The formation of pump harmonics would severely limit the gain of the TKIP, \cite{Landauer1960}. We therefore introduce  dispersion into  the TKIP by periodically loading the line, Fig.~\ref{Fig:muTKIP}b. The loads additionally introduce dispersion around the pump frequency itself, $\omega_P$. This allows us to access exponential gain. 
 
   \begin{figure}
       \vspace{-20pt}
@@ -119,8 +122,8 @@ Dispersionless nonlinear media, such as our superconducting transmission line, s
    \end{figure}
    
 \section{Previous work}
-The collaboration previously constructed a microwave frequency TKIP ($\mu$TKIP) \cite{Eom2012}. In comparison to the $\mu$TKIP, the  wTKIP must have increased gain, without the fine-scale ripple observed in the $\mu$TKIP (Fig.~\ref{Fig:TKIP_Gain}), and lower noise in order to support a scientifically compelling case for use at ALMA.  Presently, the collaboration has fabricated a first iteration wTKIP, but funds were exhausted before testing could commence. The wTKIP uses a pump at \SI{118}{GHz} and its expected gain is shown in Fig.~\ref{Fig:W-Band_Expected_Gain_Noise}a.
-
+The group of my proposed mentor previously constructed a microwave frequency TKIP ($\mu$TKIP) \cite{Eom2012}. In comparison to the $\mu$TKIP, the  wTKIP must have increased gain, without the fine-scale ripple observed in the $\mu$TKIP (Fig.~\ref{Fig:TKIP_Gain}), and lower noise for it to be useful at ALMA.  Presently, the group has fabricated a first iteration wTKIP, but funds were exhausted before testing could commence. The wTKIP uses a pump at \SI{118}{GHz} and its expected gain is shown in Fig.~\ref{Fig:W-Band_Expected_Gain_Noise}a.
+%in order to support a scientifically compelling case for use at ALMA.
 
 
 
@@ -134,12 +137,9 @@ Research tasks and their scheduling are indicated in the Gantt chart.
 	bar/.append style={fill=blue!20},
 	bar label node/.append style={left=0cm},
 	bar label node/.append style={align=left,text width=5cm},
-	]{1}{12}
+	]{1}{8}
   \gantttitle{Year 1}{4}
-  \gantttitle{Year 2}{4}
-  \gantttitle{Year 3}{4}\\
-  \gantttitle{Q1-Q2}{2}
-  \gantttitle{Q3-Q4}{2}
+  \gantttitle{Year 2}{4}\\
   \gantttitle{Q1-Q2}{2}
   \gantttitle{Q3-Q4}{2}
   \gantttitle{Q1-Q2}{2}
@@ -147,11 +147,12 @@ Research tasks and their scheduling are indicated in the Gantt chart.
 \ganttbar{wTKIP Test Setup}{1}{2}\\
 \ganttbar{Test wTKIP, add straps}{3}{8}\\
 \ganttbar{Waveguide Probes}{1}{6}\\
-\ganttbar{Reflectionless Filters}{5}{11}\\
-\ganttbar{Noise Suppression}{9}{12}\\
+\ganttbar{Reflectionless Filters}{5}{8}\\
+\ganttbar{Noise Suppression}{7}{8}\\
 \end{ganttchart}
 
-I propose to construct a test setup capable of measuring the gain and noise of the wTKIP. To suppress the gain ripple, we will better control the impedance of the paramp transmission line by introducing straps that connect the CPW ground planes, and by better coupling signals into and out of the transmission line. This can be done using full band waveguide probes to perform the transition from waveguide to the paramap transmission line (e.g.\cite{Withington1996}), or slot antennae which are combined into a phased array, as used in \cite{Golwala2012}. Additionally, we propose to develop reflectionless filters  \cite{Morgan2011}, Fig.~\ref{Fig:Reflectionless_Filter}, to dissipate the out of band power that may be traveling into or within the paramp transmission line. Lastly, since \cite{Eom2012}, the collaboration determined that excess noise in the TKIP is caused by device heating that occurs due to the intense pump waveform, Fig.~\ref{Fig:W-Band_Expected_Gain_Noise}b. I intend to minimize heating by better heat sinking the device, and using a lower $P_P$. The results of the amplifier development work will be published.
+
+I propose to construct a test setup capable of measuring the gain and noise of the wTKIP. To suppress the gain ripple, we will better control the impedance of the paramp transmission line by introducing straps that connect the CPW ground planes, and by better coupling signals into and out of the transmission line. This can be done using full band waveguide probes to perform the transition from waveguide to the paramap transmission line (e.g. \cite{Withington1996}), or slot antennae which are combined into a phased array (e.g. \cite{Golwala2012}). Additionally, we propose to develop reflectionless filters  \cite{Morgan2011}, Fig.~\ref{Fig:Reflectionless_Filter}, to dissipate the out of band power that may be traveling into or within the paramp transmission line. Lastly, since \cite{Eom2012}, the group determined that excess noise in the TKIP is partly caused by device heating that occurs due to the intense pump waveform, Fig.~\ref{Fig:W-Band_Expected_Gain_Noise}b. I intend to minimize heating by better heat sinking the device, and using a lower $P_P$. The results of this development work will be published. We will propose use of the wTKIP at ALMA.
 
 
 
